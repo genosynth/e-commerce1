@@ -1,0 +1,18 @@
+body {
+    
+    
+}
+
+.bimage {
+    background-image:  url("../home.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+    height: 80vh;
+    
+}
+
+.home-body {
+    opacity:200%;
+    font-family: 'Courier New', monospace;
+    color: black;
+}
