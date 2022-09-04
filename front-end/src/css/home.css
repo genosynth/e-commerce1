@@ -4,7 +4,7 @@ body {
 }
 
 .bimage {
-    background-image:  url("../home.jpg");
+    background-image:  url("../photos/home.jpg");
     background-repeat: no-repeat;
     background-size:  cover;
     height: 80vh;

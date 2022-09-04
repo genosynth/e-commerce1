@@ -1,7 +1,7 @@
 import React from 'react'
-import image from '../home.jpg'
+import image from '../photos/home.jpg'
 import Button from '@mui/material/Button';
-import './home.css'
+import '../css/home.css'
 
 function Home() {
 
