@@ -4,15 +4,16 @@ import '../css/cart.css'
 import { motion, AnimatePresence } from "framer-motion";
 
 function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style}) {
-  const [total, updateTotal] = useState(()=>{
-    let total = 0;
+
+  const [total, updateTotal] = useState(0)
+
+  useEffect(()=> {
+    let subTotal = 0
     cart.forEach((el)=>{
-      total=total+(el.value*el.quantity)
+      subTotal=subTotal+(el.value*el.quantity)
     })
-
-    return total
-  }) 
-
+   updateTotal(subTotal)
+  }, [cart])
 
   const css = {
     visibility: style
@@ -40,7 +41,7 @@ function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style}) {
         <ItemsInCart cart={cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity}></ItemsInCart>
           
     </table>
-    Total - {total}
+    <span>Total - {total} </span><span className='checkout'> Check Out</span>
     </div>
   )
 }

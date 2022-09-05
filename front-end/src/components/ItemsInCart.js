@@ -16,8 +16,8 @@ function ItemsInCart({ cart, increaseQuantity, decreaseQuantity }) {
           }}
         >
           +
-        </span>{" "}
-        x{item.quantity}{" "}
+        </span>
+        x{item.quantity}
         <span
           className="quantity"
           onClick={() => {
@@ -25,7 +25,7 @@ function ItemsInCart({ cart, increaseQuantity, decreaseQuantity }) {
           }}
         >
           -
-        </span>{" "}
+        </span>
             </td>
         </tr>
       

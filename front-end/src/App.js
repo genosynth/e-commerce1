@@ -10,7 +10,9 @@ import {BrowserRouter as Router, Switch, Routes, Route } from 'react-router-dom'
 function App() {
 
   const [cart, updateCart] = useState([]) 
-  const [style, updateStyle] = useState("hidden")
+  const [style, updateStyle] = useState("hidden")  
+ 
+  
   function clickCart(){
 
     if (style==="hidden"){return updateStyle("visible")}
@@ -18,9 +20,12 @@ function App() {
   }
 
   function update(object){
-
+    
     let boolean = false //to check for double items to increase quantity
     cart.forEach((el)=>{
+
+      
+
       if (el.name==object.name){
        boolean = true
       }
@@ -31,6 +36,7 @@ function App() {
       let newCart = cart.map((el)=>{
         if (el.name==object.name){
           el.quantity++
+          
         }
 
         return el
