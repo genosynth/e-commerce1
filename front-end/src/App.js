@@ -4,12 +4,16 @@ import Home from './components/Home.js'
 import Shop from './components/Shop.js'
 import Cart from './components/Cart.js'
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Switch, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const [cart, updateCart] = useState([]) 
+  //localStorage.setItem("cart",[]);
+  const [cart, updateCart] = useState(()=>{
+    if (localStorage.getItem("cart")){return JSON.parse(localStorage.getItem("cart"))}
+    return []
+  }) 
   const [style, updateStyle] = useState("hidden")  
  
   
@@ -31,7 +35,10 @@ function App() {
       }
     })
 
-    if (!boolean){ updateCart([...cart,object])}
+    if (!boolean){
+       updateCart([...cart,object])
+       
+      }
     if (boolean){
       let newCart = cart.map((el)=>{
         if (el.name==object.name){
@@ -47,6 +54,7 @@ function App() {
   }
 
 
+    
     
   }
 
@@ -78,6 +86,11 @@ function App() {
     updateCart([...result])
 
   }
+
+
+  useEffect(()=> {
+   localStorage.setItem("cart", JSON.stringify(cart))
+  }, [cart])
 
   return (
     <div className="App">
