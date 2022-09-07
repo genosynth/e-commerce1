@@ -41,7 +41,7 @@ function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style}) {
         <ItemsInCart cart={cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity}></ItemsInCart>
           
     </table>
-    <span>Total - {total} </span>
+    <span>Total - {total}€ </span>
     <span className='checkout'> Check Out</span>
     </div>
   )

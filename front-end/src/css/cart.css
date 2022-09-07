@@ -10,10 +10,11 @@
     min-width: 800px;
     border-radius: 5px;
     padding: 10px;
-    height: 600px;
-    background-color: grey;
+    min-height: 600px;
+    height:fit-content;
+    background-color: rgb(175, 175, 175);
    text-align: center;
-    
+   
 }
 
 .close {
@@ -43,3 +44,4 @@ table, th, td {
     font-size: 35px;
    }
    
+

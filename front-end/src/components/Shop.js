@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 
 function Shop({update}) {
 
-    let style = {width:"500px"}
+    let style = {width:"500px", height:"300px"}
   return (
     <div><h1>Shop</h1>
       <div className='container'>
@@ -20,7 +20,7 @@ function Shop({update}) {
           <div className='price'>
             <h3>Eur 600</h3>
             <button className='my-button' type='submit' onClick={()=> {
-              update({value:600, name:"Behringer Poly-D", quantity:1})
+              update({value:600, name:"Behringer Poly-D", quantity:1, img:polyd})
             }}>Add To Cart</button>
             </div>
         </div>
@@ -31,7 +31,7 @@ function Shop({update}) {
           <div className='price'>
             <h3>Eur 2,100</h3>
             <button className='my-button' type='submit' onClick={()=> {
-              update({value:2100, name:"Arturia Polybrute", quantity:1})
+              update({value:2100, name:"Arturia Polybrute", quantity:1, img:polybrute})
             }}>Add To Cart</button>
             </div>
           </div> 
@@ -42,19 +42,19 @@ function Shop({update}) {
           <div className='price'>
             <h3>Eur 450</h3>
             <button className='my-button' type='submit' onClick={()=>{
-              update({value:450, name:"Korg Opsix", quantity:1})
+              update({value:450, name:"Korg Opsix", quantity:1, img:opsix})
             }}>Add To Cart</button>
           </div>  
         </div>  
 
             <div className='card'>
           <h2>Behringer Deepmind 12</h2>
+          <img src={deepmind} style ={style}></img>
           <div className='price'>
-
-            <img src={deepmind} style ={style}></img>
+            
             <h3>Eur 720</h3>
             <button className='my-button' type='submit' onClick={()=>{
-              update({value:720, name:"Behringer Deepmind 12", quantity:1})
+              update({value:720, name:"Behringer Deepmind 12", quantity:1, img:deepmind})
             }}>Add To Cart</button>
           </div>
         </div> 
@@ -68,7 +68,7 @@ function Shop({update}) {
           <div className='price'>
             <h3>Eur 5,000</h3>
             <button className='my-button' type='submit' onClick={()=>{
-              update({value:5000, name:"Roland Jupiter-8", quantity:1})
+              update({value:5000, name:"Roland Jupiter-8", quantity:1, img:jupiter})
             }}>Add To Cart</button>
           </div>
         </div> 
@@ -79,7 +79,7 @@ function Shop({update}) {
           <div className='price'>
             <h3>Eur 2,400</h3>
             <button className='my-button' type='submit' onClick={()=> {
-              update({value:2400, name:"Kurzweil - K2700", quantity:1})
+              update({value:2400, name:"Kurzweil - K2700", quantity:1, img:kurzweil})
             }}>Add To Cart</button>
             </div>
         </div> 

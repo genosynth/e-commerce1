@@ -38,6 +38,7 @@
     color: white;
     cursor: pointer;
     font-weight: bolder;
+    width: 100px;
 }
 
 .my-button:hover {

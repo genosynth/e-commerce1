@@ -11,7 +11,7 @@ function Home() {
         <div className='home-body'><h1>Best Online Shop Of 2021</h1>
         <h4>-#1 Ranked by Technology Magazine</h4>
         <form action="/shop">
-        <Button variant="contained" type='submit'>Shop Now</Button>
+        <button className='home-button' type='submit'>Shop Now</button>
         </form>
         
         </div>

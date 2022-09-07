@@ -16,3 +16,18 @@ body {
     font-family: 'Courier New', monospace;
     color: black;
 }
+
+
+.home-button {
+    border: none;
+    border-radius: 5px;
+    padding: 1%;
+    background-color: rgba(0, 95, 219, 0.712);
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.home-button:hover {
+    background-color: rgb(0, 81, 255);
+}
