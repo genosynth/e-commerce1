@@ -17,6 +17,10 @@ body {
     color: black;
 }
 
+.home-body h1 {
+    font-weight: bolder;
+}
+
 
 .home-button {
     border: none;

@@ -13,7 +13,9 @@
     min-height: 600px;
     height:fit-content;
     background-color: rgb(175, 175, 175);
-   text-align: center;
+    text-align: center;
+    z-index: 99 ;
+    
    
 }
 
@@ -28,12 +30,12 @@
     background-color: rgba(255, 255, 255, 0.308);
 }
 
-.checkout {
+/*.checkout {
     border: solid 2px;
     border-radius: 7px;
     cursor: pointer;
     background-color: rgba(0, 95, 219, 0.712);
-}
+}*/
 
 .checkout:hover {
     background-color: rgb(0, 81, 255);

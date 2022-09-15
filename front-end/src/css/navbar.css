@@ -43,9 +43,13 @@
 
   nav a:hover {
     
-    color: #2691bb;
+    color: #2691bb;    
     
-    
+  }
+
+  nav h1 {
+    font-size: larger;
+    font-weight: bolder;
   }
   
    /* 

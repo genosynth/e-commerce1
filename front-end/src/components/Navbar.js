@@ -10,7 +10,7 @@ let quantity = 0
   });
   return (
     <nav>
-    <h2>The Zone</h2>
+    <h1>The Zone</h1>
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/shop">Shop</a></li>
