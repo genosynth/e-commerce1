@@ -1,6 +1,8 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-import Item from './Item';
+
 
 
 function Items({items,update}) {
@@ -9,7 +11,20 @@ function Items({items,update}) {
         
         items.map(item => {
 
-            return <Item key={item.name} item={item} update={update} />                      
+            return (
+                <Card style={{ width: '40rem' }}>
+               <Card.Body>
+                <h2>{item.name}</h2>
+                <Card.Img variant="top" src={item.img} />
+                <div className='price'>
+                  <h3>{item.value}€</h3>
+                  <Button variant="primary" type='submit' onClick={()=> {
+                    update(item)
+                  }}>Add To Cart</Button>
+                  </div>
+                  </Card.Body>
+                </Card>
+            )                    
 
         })    
 

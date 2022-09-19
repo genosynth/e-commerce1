@@ -12,6 +12,7 @@ function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style}) {
   useEffect(()=> {
     let subTotal = 0
     cart.forEach((el)=>{
+     
       subTotal=subTotal+(el.value*el.quantity)
     })
    updateTotal(subTotal)
@@ -19,6 +20,7 @@ function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style}) {
 
   const css = {
     visibility: style
+    
   }
 
   if (cart.length<1){
@@ -34,7 +36,7 @@ function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style}) {
     <div className='cart' style={css}>
       <h1>Cart</h1>
 
-      <Table>
+      <Table >
         <thead>
           <tr>
             <th>Product Name</th>

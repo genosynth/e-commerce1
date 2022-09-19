@@ -1,7 +1,9 @@
-import React from "react";
+import React , {useEffect}from "react";
 import '../css/itemsInCart.css'
 
 function ItemsInCart({ cart, increaseQuantity, decreaseQuantity }) {
+ 
+
   return cart.map((item) => {
     return (
 

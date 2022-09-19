@@ -10,6 +10,8 @@ import kurzweil from './photos/kurzweil2700.jpg'
 import jupiter from './photos/jupiter.png'
 import opsix from './photos/opsix.png'
 import deepmind from './photos/deepmind.png'
+import minilogue from './photos/minilogue.png'
+import juno from './photos/juno.jpg'
 
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Switch, Routes, Route } from 'react-router-dom';
@@ -29,7 +31,9 @@ function App() {
     {value:450, name:"Korg Opsix", quantity:1, img:opsix},
     {value:720, name:"Behringer Deepmind 12", quantity:1, img:deepmind},
     {value:5000, name:"Roland Jupiter-8", quantity:1, img:jupiter},
-    {value:2400, name:"Kurzweil - K2700", quantity:1, img:kurzweil}
+    {value:2400, name:"Kurzweil - K2700", quantity:1, img:kurzweil},
+    {value:450, name:"Korg Minilogue XD", quantity:1, img:minilogue},
+    {value:650, name:"Roland Juno-DS 61", quantity:1, img:juno}
 
   ])
  
@@ -43,35 +47,37 @@ function App() {
   function update(object){
     
     let boolean = false //to check for double items to increase quantity
-    cart.forEach((el)=>{
+    cart.forEach((el)=>{    
 
-      
+    
 
       if (el.name==object.name){
        boolean = true
       }
     })
 
+
     if (!boolean){
+      let obj = object
        updateCart([...cart,object])
+       console.log(cart)
        
       }
     if (boolean){
       let newCart = cart.map((el)=>{
         if (el.name==object.name){
-          el.quantity++
-          
+          el.quantity++         
+                   
         }
 
         return el
     })
 
-    updateCart([...newCart])
-  
+      updateCart([...newCart])
+    
   }
 
-
-    
+    console.log(items)
     
   }
 
@@ -84,30 +90,70 @@ function App() {
 
       return el
     })
-
+    
     updateCart([...newCart])
   }
 
   function decreaseQuantity(object){
     
     let newCart = cart.map((el)=>{
-      if (el.name==object.name){
-        el.quantity--
+      if (el.name==object.name && el.quantity!==0){
+        el.quantity--;
+        
       }
 
      return el    
     })
 
-    const result = newCart.filter(item => item.quantity > 0);
-   
-    updateCart([...result])
+    console.log("this is new cart")
+    console.log(newCart)
+    
+    console.log("this is cart")
+    console.log(cart)
 
+
+    const result = newCart.filter(item => item.quantity > 0);
+    //result.forEach(el => Math.abs(el))
+    console.log("this is result")
+    console.log(result)
+    updateCart([...result])
+    console.log(cart)
   }
 
 
   useEffect(()=> {
    localStorage.setItem("cart", JSON.stringify(cart))
+   updateItems([
+    {name:"Behringer Poly D", value:600,quantity:1, img:polyd},
+    {value:2100, name:"Arturia Polybrute", quantity:1, img:polybrute},
+    {value:450, name:"Korg Opsix", quantity:1, img:opsix},
+    {value:720, name:"Behringer Deepmind 12", quantity:1, img:deepmind},
+    {value:5000, name:"Roland Jupiter-8", quantity:1, img:jupiter},
+    {value:2400, name:"Kurzweil - K2700", quantity:1, img:kurzweil},
+    {value:450, name:"Korg Minilogue XD", quantity:1, img:minilogue},
+    {value:650, name:"Roland Juno-DS 61", quantity:1, img:juno}
+
+  ])
   }, [cart])
+
+ 
+  if (style=="hidden"){ // this is done so that cart will not be rendered when visibility of style variable == hidden
+    return(
+    <div className="App">
+    
+     <Navbar cart={cart} clickCart={clickCart}/>
+     <Router>
+        <Routes>
+          <Route path="/"  element={<Home></Home>}/>
+          <Route path="/shop" element={<Shop update={update} items={items}></Shop>}/>
+        </Routes>
+     </Router>
+    
+      
+
+    </div>
+    )
+  }
 
   return (
     <div className="App">
