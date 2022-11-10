@@ -141,7 +141,7 @@ function App() {
     <div className="App">
     
      <Navbar cart={cart} clickCart={clickCart}/>
-     <Router baseline="e-commerce1/">
+     <Router basename="e-commerce1/">
         <Routes>
           <Route path="/"  element={<Home></Home>}/>
           <Route path="/shop" element={<Shop update={update} items={items}></Shop>}/>
@@ -158,7 +158,7 @@ function App() {
     <div className="App">
     <Cart cart={cart} clickCart={clickCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} manualQuantity={manualQuantity} style={style}></Cart> 
      <Navbar cart={cart} clickCart={clickCart}/>
-     <Router>
+     <Router basename="e-commerce1/">
         <Routes>
           <Route path="/"  element={<Home></Home>}/>
           <Route path="/shop" element={<Shop update={update} items={items}></Shop>}/>
