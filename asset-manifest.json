@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/e-commerce1/static/css/main.100559fd.css",
+    "main.js": "/e-commerce1/static/js/main.d008a6b7.js",
+    "static/media/opsix.png": "/e-commerce1/static/media/opsix.1d52a3e20a7196b36e98.png",
+    "static/media/deepmind.png": "/e-commerce1/static/media/deepmind.277feb71b804d64516ed.png",
+    "static/media/jupiter.png": "/e-commerce1/static/media/jupiter.72ac5e970c437d652458.png",
+    "static/media/juno.jpg": "/e-commerce1/static/media/juno.0ac03e5033d525968652.jpg",
+    "static/media/polyd.jpg": "/e-commerce1/static/media/polyd.4dfae9674527b62856d0.jpg",
+    "static/media/home.jpg": "/e-commerce1/static/media/home.f1d138dd43b6e3bf93ee.jpg",
+    "static/media/polybrute.png": "/e-commerce1/static/media/polybrute.063ba9cc447c1e086bd0.png",
+    "static/media/minilogue.png": "/e-commerce1/static/media/minilogue.e634cf8fb4e6f5a42e56.png",
+    "static/media/kurzweil2700.jpg": "/e-commerce1/static/media/kurzweil2700.cfd15cf5e2512e7d551e.jpg",
+    "index.html": "/e-commerce1/index.html",
+    "main.100559fd.css.map": "/e-commerce1/static/css/main.100559fd.css.map",
+    "main.d008a6b7.js.map": "/e-commerce1/static/js/main.d008a6b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.100559fd.css",
+    "static/js/main.d008a6b7.js"
+  ]
+}
