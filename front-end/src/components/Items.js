@@ -23,6 +23,7 @@ function Items({items,update}) {
                   }}>Add To Cart</Button>
                   </div>
                   </Card.Body>
+
                 </Card>
             )                    
 

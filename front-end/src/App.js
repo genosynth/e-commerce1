@@ -76,8 +76,6 @@ function App() {
       updateCart([...newCart])
     
   }
-
-    console.log(items)
     
   }
 
@@ -104,20 +102,21 @@ function App() {
 
      return el    
     })
-
-    console.log("this is new cart")
-    console.log(newCart)
-    
-    console.log("this is cart")
-    console.log(cart)
-
-
+   
     const result = newCart.filter(item => item.quantity > 0);
-    //result.forEach(el => Math.abs(el))
-    console.log("this is result")
-    console.log(result)
-    updateCart([...result])
-    console.log(cart)
+  
+    updateCart([...result])   
+  }
+
+  function manualQuantity(item,quantity){
+    let updatedCart = cart.map((el)=>{
+      if (el.name==item.name){
+        el.quantity = quantity
+      }
+      return el
+    })
+
+    updateCart([...updatedCart])
   }
 
 
@@ -157,7 +156,7 @@ function App() {
 
   return (
     <div className="App">
-    <Cart cart={cart} clickCart={clickCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} style={style}></Cart> 
+    <Cart cart={cart} clickCart={clickCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} manualQuantity={manualQuantity} style={style}></Cart> 
      <Navbar cart={cart} clickCart={clickCart}/>
      <Router>
         <Routes>

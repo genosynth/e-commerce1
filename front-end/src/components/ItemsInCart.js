@@ -1,9 +1,9 @@
-import React , {useEffect}from "react";
+import React , {useEffect, useState}from "react";
 import '../css/itemsInCart.css'
 
-function ItemsInCart({ cart, increaseQuantity, decreaseQuantity }) {
+function ItemsInCart({ cart, increaseQuantity, decreaseQuantity, manualQuantity }) {
  
-
+  
   return cart.map((item) => {
     return (
 
@@ -11,6 +11,7 @@ function ItemsInCart({ cart, increaseQuantity, decreaseQuantity }) {
             <td>{item.name}<img src={item.img} style={{width:"100px"}}></img></td>
             <td>{item.value * item.quantity}€</td>
             <td>
+              <span>
             <span
           className="quantity"
           onClick={() => {
@@ -19,7 +20,7 @@ function ItemsInCart({ cart, increaseQuantity, decreaseQuantity }) {
         >
           -
         </span>
-        x{item.quantity}
+        <input type="number" min="1" value={item.quantity} onChange={(event)=>{manualQuantity(item,Math.abs(event.target.value))}} maxLength="2" size="2"/>
         <span
           className="quantity"
           onClick={() => {
@@ -27,6 +28,7 @@ function ItemsInCart({ cart, increaseQuantity, decreaseQuantity }) {
           }}
         >
           +
+        </span>
         </span>
             </td>
 

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 
-function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style}) {
+function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style,manualQuantity}) {
 
   const [total, updateTotal] = useState(0)
 
@@ -46,7 +46,7 @@ function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style}) {
         </thead>
         
         
-        <ItemsInCart cart={cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity}></ItemsInCart>
+        <ItemsInCart cart={cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} manualQuantity={manualQuantity}></ItemsInCart>
        
     </Table>
     <span>Total - {total}€ </span>
