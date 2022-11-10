@@ -141,7 +141,7 @@ function App() {
     <div className="App">
     
      <Navbar cart={cart} clickCart={clickCart}/>
-     <Router baseline="">
+     <Router baseline="/">
         <Routes>
           <Route path="/"  element={<Home></Home>}/>
           <Route path="/shop" element={<Shop update={update} items={items}></Shop>}/>
