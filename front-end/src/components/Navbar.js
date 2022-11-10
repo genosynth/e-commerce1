@@ -12,8 +12,8 @@ let quantity = 0
     <nav>
     <h1>The Zone</h1>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/shop">Shop</a></li>
+      <li><a href="/e-commerce1">Home</a></li>
+      <li><a href="/e-commerce1/shop">Shop</a></li>
       <li><a href="#" onClick={clickCart}><CartIcon fontSize='large'/>{quantity}</a></li>
     
     </ul>
