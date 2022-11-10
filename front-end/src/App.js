@@ -14,7 +14,7 @@ import minilogue from './photos/minilogue.png'
 import juno from './photos/juno.jpg'
 
 import React, {useState, useEffect} from 'react';
-import {BrowserRouter as Router, Switch, Routes, Route } from 'react-router-dom';
+import {HashRouter as Router, Switch, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -141,7 +141,7 @@ function App() {
     <div className="App">
     
      <Navbar cart={cart} clickCart={clickCart}/>
-     <Router>
+     <Router baseline="">
         <Routes>
           <Route path="/"  element={<Home></Home>}/>
           <Route path="/shop" element={<Shop update={update} items={items}></Shop>}/>
