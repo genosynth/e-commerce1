@@ -14,7 +14,7 @@ import minilogue from './photos/minilogue.png'
 import juno from './photos/juno.jpg'
 
 import React, {useState, useEffect} from 'react';
-import {HashRouter as Router, Switch, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Routes, Route } from 'react-router-dom';
 
 function App() {
 
