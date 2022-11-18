@@ -14,7 +14,7 @@
     
 }
 
-.container {
+.container-out {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -43,15 +43,14 @@
 
 .shop {
     padding-top: 7%;
-    -webkit-transition: color 0.5s;
-    
+  
    
 }
 
-@media only screen and (max-width: 600) {
+
+@media only screen and (max-width: 600px) {
     .shop {
-      padding-top: 70%;
+        padding-top: 65%;
     }
    
   } 
-

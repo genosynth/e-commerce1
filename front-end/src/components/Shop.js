@@ -7,7 +7,7 @@ function Shop({update,items}) {
  
   return (
     <div className='shop'><h1>Shop</h1>
-      <div className='container'>
+      <div className='container-out'>
         <Items items={items} update={update}></Items>          
     
       </div>

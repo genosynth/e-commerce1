@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 
 
 
+
 function Items({items,update}) {
 
     return(
@@ -12,7 +13,7 @@ function Items({items,update}) {
         items.map(item => {
 
             return (
-                <Card style={{ width: '40rem' }}>
+                <Card key={item.name} style={{ width: '40rem' }}>
                <Card.Body>
                 <h2>{item.name}</h2>
                 <Card.Img variant="top" src={item.img} />

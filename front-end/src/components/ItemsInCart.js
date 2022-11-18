@@ -7,7 +7,7 @@ function ItemsInCart({ cart, increaseQuantity, decreaseQuantity, manualQuantity 
   return cart.map((item) => {
     return (
 
-        <tr>
+        <tr key={item.name}>
             <td>{item.name}<img src={item.img} style={{width:"100px"}}></img></td>
             <td>{item.value * item.quantity}€</td>
             <td>

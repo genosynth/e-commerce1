@@ -15,6 +15,9 @@ import juno from './photos/juno.jpg'
 
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Switch, Routes, Route } from 'react-router-dom';
+import SignUp from './components/SignUp';
+import LogIn from './components/LogIn';
+import CheckOut from './components/CheckOut';
 
 function App() {
 
@@ -145,6 +148,9 @@ function App() {
         <Routes>
           <Route path="/"  element={<Home></Home>}/>
           <Route path="/shop" element={<Shop update={update} items={items}></Shop>}/>
+          <Route path="/register" element={<SignUp></SignUp>}/>
+          <Route path="/login" element={<LogIn></LogIn>}/>
+          <Route path="/checkOut" element={<CheckOut cart={cart}></CheckOut>}/>
         </Routes>
      </Router>
     
@@ -162,6 +168,9 @@ function App() {
         <Routes>
           <Route path="/"  element={<Home></Home>}/>
           <Route path="/shop" element={<Shop update={update} items={items}></Shop>}/>
+          <Route path="/register" element={<SignUp></SignUp>}/>
+          <Route path="/login" element={<LogIn></LogIn>}/>
+          <Route path="/checkOut" element={<CheckOut cart={cart}></CheckOut>}/>
         </Routes>
      </Router>
     

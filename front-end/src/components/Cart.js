@@ -23,6 +23,14 @@ function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style,manualQuan
     
   }
 
+  const checkOut = () =>{
+  
+      window.location.href = "/e-commerce1/checkOut"
+    
+  }
+
+
+
   if (cart.length<1){
     return (
       <div className='cart' style={css}>
@@ -37,20 +45,20 @@ function Cart({cart,increaseQuantity,decreaseQuantity,clickCart,style,manualQuan
       <h1>Cart</h1>
 
       <Table >
-        <thead>
+     
           <tr>
             <th>Product Name</th>
             <th>Price</th>
             <th>Quantity</th>
           </tr>
-        </thead>
+       
         
         
         <ItemsInCart cart={cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} manualQuantity={manualQuantity}></ItemsInCart>
        
     </Table>
     <span>Total - {total}€ </span>
-    <Button>Check Out</Button>
+    <Button onClick={checkOut}>Check Out</Button>
     <Button variant="secondary" onClick={clickCart}>Close</Button>
     </div>
   )
