@@ -17,7 +17,7 @@ const [user] = useState(()=>{
       <span>{JSON.parse(localStorage.getItem("ecommerce")).fullName}</span>
       <Button style={{width:"50%"}}variant="outlined" onClick={logOut}>Log Out</Button>
     </div>
-  } else return false
+  } else return   <Button variant="outlined" href='/e-commerce1/login'>Log In</Button>
 })
 
 let quantity = 0

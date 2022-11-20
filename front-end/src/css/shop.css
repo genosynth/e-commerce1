@@ -48,9 +48,31 @@
 }
 
 
+@media only screen and (max-width: 1750px) {
+    .shop {
+        padding-top: 13%;
+    }
+   
+  } 
+
+  @media only screen and (max-width: 1250px) {
+    .shop {
+        padding-top: 18%;
+    }
+   
+  } 
+
+  @media only screen and (max-width: 950px) {
+    .shop {
+        padding-top: 35%;
+    }
+   
+  } 
+
+
 @media only screen and (max-width: 600px) {
     .shop {
-        padding-top: 65%;
+        padding-top: 85%;
     }
    
   } 
